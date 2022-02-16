@@ -1,0 +1,17 @@
+lifeCyclePolicyArgs: {
+    rules: [{
+        selection: "any",
+        maximumNumberOfImages: 5,
+    }, {
+        selection: "untagged",
+        maximumNumberOfImages: 3,
+        maximumAgeLimit: 14,
+    }, { 
+        selection: { tagPrefixList: ["prod"] },
+        maximumNumberOfImages: 1,
+    }, {
+        selection: { tagPrefixList: ["alpha", "beta"] },
+        maximumNumberOfImages: 1,
+        maximumAgeLimit: 5,
+    }]
+}
